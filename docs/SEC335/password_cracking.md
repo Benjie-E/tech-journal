@@ -18,3 +18,8 @@
 
 ## Issues
 - Couldn't
+## Unshadow
+- Unshadow prior to Ripper
+- `unshadow password.txt shadow.txt >> unshadowede.txt`
+## JtR
+- `john --wordlist="wordlist.txt" unshadowed.txt`
