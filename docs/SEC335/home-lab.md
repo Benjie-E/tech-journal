@@ -75,9 +75,9 @@
 - `wg genkey | tee privatekey | wg pubkey > publickey`
 ### vyos
 #### Wireguard keypair
-- `generate wireguard default-keypair`
+- `generate pki wireguard key-pair`
 - `configure`
-- `set interfaces wireguard wg0 private-key default`
+- `set interfaces wireguard wg0 private-key KEY-FROM-GENERATE`
 #### Create Peer
 - `set interfaces wireguard wg0 address '10.0.99.1/24'`
 - `set interfaces wireguard wg0 peer namegoeshere allowed-ips '10.0.99.100/32'`
@@ -95,3 +95,11 @@ Address = 10.0.99.100/24
 PublicKey = Vyos-Public-Key
 EndPoint = 192.168.229.10:51820
 AllowedIPs = 10.0.99.1/32, 10.0.5.0/24`
+# Problems
+## kali ssh key type incompatibility
+- Create .conf file int /etc/ssh/ssh_config.d/
+- `Host 10.0.5.*`\
+`PubkeyAcceptedKeyTypes ssh-rsa`\
+`HostKeyAlgorithms ssh-rsa`
+## `generate wireguard default-keypair` deprecated
+- use `generate pki wireguard key-pair` instead
