@@ -13,8 +13,14 @@
 - Add additional Network adapter for Network 5
 - follow default setup and add password for vyos user
 - reboot
-### Configure
+### Remove MAC addresses
 - `Configure`
 - `show interfaces`
 - delete hw-id if exists
 - `commit` and `save`
+- poweroff and create snapshot and clone
+### Configure eth
+- `Configure`
+- `set interfaces ethernet eth*` `description`/`address`
+- `set protocols static route 0.0.0.0./24 next-hop` NAT gateway(192.168.229.2)
+- commit and save
