@@ -13,8 +13,8 @@
 - username: Administrator
 - password: F1r3Dr@g0n
 ## flags
-- root:`62c4462a-aec8-4e99-8cfe-ac7cb67c01b2`
-- user:`b5856212-779b-4cff-87fa-63671e0a3131`
+- root:![](images/gloin-root.png)
+- user:![](images/gloin-user.png)
 ## How to prevent
 - Validate SQL fields
 - Parameterize the queries to only allow specific inputs
